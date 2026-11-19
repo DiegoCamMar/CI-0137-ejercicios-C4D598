@@ -10,9 +10,6 @@
     <!-- Favicon -->
     <link rel="icon" href="assets/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="styles.css">
-
-    <!-- JavaScript externo (se ejecuta cuando el HTML ya fue leído) -->
-    <script src="js/main.js" defer></script>
 </head>
 <body>
 
@@ -39,9 +36,6 @@
                 </li>
             </ul>
         </address>
-
-        <!-- Botón para alternar entre modo claro y oscuro (lógica en js/main.js) -->
-        <button type="button" id="boton-tema" aria-pressed="false">Modo oscuro</button>
     </header>
 
     <hr>
@@ -52,7 +46,7 @@
         <section>
             <h2 id="perfil">Perfil profesional</h2>
             <p>
-                Estudiante de tercer año de la carrera Bachillerato en Computación con varios énfasis, con
+                Estudiante de tercer año de la carrera Bachillerato en Computación con varios énfasis, con 
                 interés en desarrollo web, videojuegos y bases de datos. Cuento con experiencia académica
                 desarrollando proyectos en C, C++, Python, Java, C#, HTML, CSS y JavaScript. He creado
                 proyectos en Unity y GameMaker y participado en competencias internacionales de videojuegos.
@@ -60,41 +54,115 @@
             </p>
         </section>
 
-        <!--  Experiencia y proyectos (los <article> se generan desde js/main.js)  -->
-        <section id="seccion-experiencia">
+        <!--  Experiencia y proyectos  -->
+        <section>
             <h2 id="experiencia">Experiencia y proyectos</h2>
+            <article>
+                <h3>Proyecto académico — Sistema de gestión clínica</h3>
+                <p><em>Universidad de Costa Rica, de Marzo 2026 hasta Junio 2026</em></p>
+                <ul>
+                    <li>Implementé junto con un equipo un servidor con servicios para la gestión de doctores y pacientes usando C y C++.</li>
+                    <li>Implementé consultas SQL para datos de los usuarios, doctores y pacientes en tiempo real.</li>
+                    <li>Diseñé la interfaz del cliente y de administración de nodos.</li>
+                </ul>
+            </article>
+
+            <article>
+                <h3>Competencia internacional — Desarrollo de videojuego BARRO</h3>
+                <p><em>GameJam+ 25/26, de Octubre 2025 hasta Junio 2026</em></p>
+                <ul>
+                    <li>Desarrollé junto con un equipo un <i>precision platformer</i> en GameMaker.</li>
+                    <li>Trabajé en música, arte, diseño y programación.</li>
+                    <li>Aprendí a trabajar en un entorno de desarrollo colaborativo en un cierto periodo de tiempo (tener un prototipo funcional en 48 horas, luego desarrollarlo por 8 meses.)</li>
+                    <li>Aprendí herramientas de emprendimiento y producción de videojuegos a nivel industrial.</li>
+                </ul>
+            </article>
         </section>
 
-        <!--  Formación académica (los <article> se generan desde js/main.js)  -->
-        <section id="seccion-formacion">
+        <!--  Formación académica  -->
+        <section>
             <h2 id="formacion">Formación académica</h2>
+
+            <article>
+                <h3>Ingeniería en Sistemas</h3>
+                <p>Universidad de Costa Rica, 2024 - presente</p>
+                <p>Promedio general: 9.1 </p>
+            </article>
+
+            <article>
+                <h3>Bachillerato en Educación Media</h3>
+                <p>Saint Anthony High School, 2019 - 2023</p>
+            </article>
         </section>
 
-        <!--  Habilidades (los <li> se generan desde js/main.js)  -->
+        <!--  Habilidades  -->
         <section>
             <h2 id="habilidades">Habilidades</h2>
 
             <h3>Técnicas</h3>
-            <ul id="lista-habilidades-tecnicas"></ul>
+            <ul>
+                <li>HTML5 semántico</li>
+                <li>Javascript</li>
+                <li>CSS</li>
+                <li>Python</li>
+                <li>C</li>
+                <li>C++</li>
+                <li>C#</li>
+                <li>Java</li>
+                <li>SQL</li>
+                <li>GameMaker</li>
+                <li>Unity</li>
+                <li>Git y GitHub</li>
+                <li>Linux</li>
+            </ul>
 
             <h3>Blandas</h3>
-            <ul id="lista-habilidades-blandas"></ul>
+            <ul>
+                <li>Trabajo en equipo</li>
+                <li>Comunicación efectiva</li>
+                <li>Resolución de problemas</li>
+                <li>Gestión del tiempo</li>
+            </ul>
         </section>
 
         <section>
             <h2 id="idiomas">Idiomas</h2>
-            <ol id="lista-idiomas"></ol>
+            <ol>
+                <li>Inglés</li>
+                <li>Español</li>
+                <li>Francés</li>
+            </ol>
         </section>
 
-        <!--  Cursos  -->
+        <!--  Cursos (otra tabla válida)  -->
         <section>
             <h2 id="cursos">Cursos y certificaciones</h2>
-            <ol id="lista-cursos"></ol>
+            <ol>
+                <li>Introducción a la Computación, UCR - 2024</li>
+                <li>Programación 1, UCR - 2024</li>
+                <li>Programación 2, UCR - 2025</li>
+                <li>Programación Paralela y Concurrente, UCR - 2025</li>
+                <li>Proyecto integrador de Sistemas Operativos y Redes de Comunicación y Datos, UCR - 2026</li>
+            </ol>
+
         </section>
 
         <section>
             <h2 id="enlaces">Enlaces de interés</h2>
-            <ul id="lista-enlaces"></ul>
+            <ul>
+                <li>
+                    <a href="https://github.com/DiegoCamMar"
+                       target="_blank" rel="noopener">Mi perfil de GitHub</a>
+                </li>
+                <li>
+                    <a href="https://www.linkedin.com/in/diegocamachomartinez"
+                       target="_blank" rel="noopener">Mi perfil de LinkedIn</a>
+                </li>
+                <li>
+                    <a href="https://developer.mozilla.org/es/docs/Web/HTML"
+                       target="_blank" rel="noopener">Documentación HTML</a>
+                </li>
+            </ul>
         </section>
 
     </main>
