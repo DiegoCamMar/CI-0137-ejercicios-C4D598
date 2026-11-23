@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Currículum y portafolio personal de Diego Camacho Martínez, estudiante de Bachillerato en Computación con varios énfasis.">
+    <meta name="author" content="Diego Camacho Martínez">
+    <title>Diego Camacho Martínez Currículum </title>
+
+    <!-- Favicon -->
+    <link rel="icon" href="assets/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="styles.css">
+
+    <!-- JavaScript externo (se ejecuta cuando el HTML ya fue leído) -->
+    <script src="js/main.js" defer></script>
+</head>
+<body>
+
+    <!-- Header -->
+    <header>
+        <h1>Diego Camacho Martínez</h1>
+        <p><strong>Bachillerato en Computación con varios énfasis</strong></p>
+
+        <img src="assets/foto.jpg"
+             alt="Fotografía de perfil con fondo claro"
+             width="150" height="150">
+
+        <address>
+            <ul>
+                <li>Correo: <a href="mailto:diego.camacho.martinez26@gmail.com">diego.camacho.martinez26@gmail.com</a></li>
+                <li>Teléfono: <a href="tel:+50660577210">+506 6057-7210</a></li>
+                <li>LinkedIn:
+                    <a href="https://www.linkedin.com/in/diegocamachomartinez"
+                       target="_blank" rel="noopener">linkedin.com/in/diegocamachomartinez</a>
+                </li>
+                <li>GitHub:
+                    <a href="https://github.com/DiegoCamMar"
+                       target="_blank" rel="noopener">github.com/DiegoCamMar</a>
+                </li>
+            </ul>
+        </address>
+
+        <!-- Botón para alternar entre modo claro y oscuro (lógica en js/main.js) -->
+        <button type="button" id="boton-tema" aria-pressed="false">Modo oscuro</button>
+    </header>
+
+    <hr>
+
+    <main>
+
+        <!--  Perfil profesional  -->
+        <section>
+            <h2 id="perfil">Perfil profesional</h2>
+            <p>
+                Estudiante de tercer año de la carrera Bachillerato en Computación con varios énfasis, con
+                interés en desarrollo web, videojuegos y bases de datos. Cuento con experiencia académica
+                desarrollando proyectos en C, C++, Python, Java, C#, HTML, CSS y JavaScript. He creado
+                proyectos en Unity y GameMaker y participado en competencias internacionales de videojuegos.
+                Busco aplicar mis conocimientos en un entorno profesional donde pueda seguir aprendiendo y aportando soluciones.
+            </p>
+        </section>
+
+        <!--  Experiencia y proyectos (los <article> se generan desde js/main.js)  -->
+        <section id="seccion-experiencia">
+            <h2 id="experiencia">Experiencia y proyectos</h2>
+        </section>
+
+        <!--  Formación académica (los <article> se generan desde js/main.js)  -->
+        <section id="seccion-formacion">
+            <h2 id="formacion">Formación académica</h2>
+        </section>
+
+        <!--  Habilidades (los <li> se generan desde js/main.js)  -->
+        <section>
+            <h2 id="habilidades">Habilidades</h2>
+
+            <h3>Técnicas</h3>
+            <ul id="lista-habilidades-tecnicas"></ul>
+
+            <h3>Blandas</h3>
+            <ul id="lista-habilidades-blandas"></ul>
+        </section>
+
+        <section>
+            <h2 id="idiomas">Idiomas</h2>
+            <ol id="lista-idiomas"></ol>
+        </section>
+
+        <!--  Cursos  -->
+        <section>
+            <h2 id="cursos">Cursos y certificaciones</h2>
+            <ol id="lista-cursos"></ol>
+        </section>
+
+        <section>
+            <h2 id="enlaces">Enlaces de interés</h2>
+            <ul id="lista-enlaces"></ul>
+        </section>
+
+    </main>
+
+    <hr>
+
+    <footer>
+        <p>&copy; 2025 Diego Camacho Martínez — Currículum personal.</p>
+        <p>Última actualización: <time datetime="2025-09-22">22 de septiembre de 2025</time></p>
+    </footer>
+
+</body>
+</html>
