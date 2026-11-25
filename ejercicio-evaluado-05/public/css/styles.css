@@ -391,3 +391,90 @@ h2#enlaces ~ ul > li > a {
         --color-tag-bg:     #1e2a3a;
     }
 }
+
+/* ============================================================
+   Formulario de contacto (POST /contacto)
+   ============================================================ */
+.formulario-contacto {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-xs);
+    max-width: 560px;
+}
+
+.formulario-contacto label {
+    font-weight: 600;
+    margin-top: var(--space-sm);
+}
+
+.formulario-contacto input,
+.formulario-contacto textarea {
+    font: inherit;
+    color: var(--color-text);
+    background-color: var(--color-bg);
+    border: 1px solid var(--color-border);
+    border-radius: var(--border-radius);
+    padding: var(--space-sm);
+    width: 100%;
+}
+
+.formulario-contacto textarea {
+    resize: vertical;
+}
+
+.formulario-contacto input:focus-visible,
+.formulario-contacto textarea:focus-visible {
+    outline: 3px solid var(--color-accent);
+    outline-offset: 1px;
+}
+
+.formulario-contacto button {
+    align-self: flex-start;
+    margin-top: var(--space-md);
+    padding: var(--space-sm) var(--space-lg);
+    font: inherit;
+    font-weight: 600;
+    color: #ffffff;
+    background-color: var(--color-primary);
+    border: none;
+    border-radius: 2rem;
+    cursor: pointer;
+}
+
+.formulario-contacto button:hover {
+    background-color: var(--color-accent);
+}
+
+.formulario-contacto button:focus-visible {
+    outline: 3px solid var(--color-accent);
+    outline-offset: 2px;
+}
+
+:root[data-tema="oscuro"] .formulario-contacto button {
+    color: var(--color-bg);
+}
+
+.errores {
+    border: 1px solid #c0392b;
+    border-left-width: 4px;
+    border-radius: var(--border-radius);
+    padding: var(--space-sm) var(--space-md);
+    margin-bottom: var(--space-md);
+    color: var(--color-text);
+}
+
+/* Páginas sencillas: agradecimiento y 404 */
+.pagina-simple {
+    max-width: 880px;
+    margin-inline: auto;
+    padding: var(--space-2xl) var(--space-xl);
+    text-align: center;
+}
+
+.pagina-simple h1 {
+    margin-bottom: var(--space-md);
+}
+
+.pagina-simple #boton-tema {
+    margin-top: var(--space-lg);
+}
