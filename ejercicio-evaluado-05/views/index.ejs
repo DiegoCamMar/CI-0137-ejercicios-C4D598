@@ -1,0 +1,136 @@
+<%- include("partials/head") %>
+
+    <header>
+        <h1><%= perfil.nombre %></h1>
+        <p><strong><%= perfil.carrera %></strong></p>
+
+        <img src="<%= perfil.foto %>" alt="<%= perfil.fotoAlt %>" width="150" height="150">
+
+        <address>
+            <ul>
+                <% perfil.contacto.forEach((dato) => { %>
+                    <li><%= dato.etiqueta %>:
+                        <a href="<%= dato.url %>"<% if (dato.externo) { %> target="_blank" rel="noopener"<% } %>><%= dato.texto %></a>
+                    </li>
+                <% }) %>
+            </ul>
+        </address>
+
+        <button type="button" id="boton-tema" aria-pressed="false">Modo oscuro</button>
+    </header>
+
+    <hr>
+
+    <main>
+
+        <section>
+            <h2 id="perfil">Perfil profesional</h2>
+            <p><%= perfil.resumen %></p>
+        </section>
+
+        <section>
+            <h2 id="experiencia">Experiencia y proyectos</h2>
+            <% experiencia.forEach((item) => { %>
+                <article>
+                    <h3><%= item.titulo %></h3>
+                    <p><em><%= item.lugar %>, <%= item.periodo %></em></p>
+                    <ul>
+                        <% item.logros.forEach((logro) => { %>
+                            <li><%= logro %></li>
+                        <% }) %>
+                    </ul>
+                </article>
+            <% }) %>
+        </section>
+
+        <section>
+            <h2 id="formacion">Formación académica</h2>
+            <% formacion.forEach((item) => { %>
+                <article>
+                    <h3><%= item.titulo %></h3>
+                    <p><%= item.institucion %>, <%= item.periodo %></p>
+                    <% if (item.detalle) { %>
+                        <p><%= item.detalle %></p>
+                    <% } %>
+                </article>
+            <% }) %>
+        </section>
+
+        <section>
+            <h2 id="habilidades">Habilidades</h2>
+
+            <h3>Técnicas</h3>
+            <ul>
+                <% habilidadesTecnicas.forEach((h) => { %>
+                    <li><%= h.nombre %></li>
+                <% }) %>
+            </ul>
+
+            <h3>Blandas</h3>
+            <ul>
+                <% habilidadesBlandas.forEach((h) => { %>
+                    <li><%= h.nombre %></li>
+                <% }) %>
+            </ul>
+        </section>
+
+        <section>
+            <h2 id="idiomas">Idiomas</h2>
+            <ol>
+                <% idiomas.forEach((idioma) => { %>
+                    <li><%= idioma.nombre %></li>
+                <% }) %>
+            </ol>
+        </section>
+
+        <section>
+            <h2 id="cursos">Cursos y certificaciones</h2>
+            <ol>
+                <% cursos.forEach((curso) => { %>
+                    <li><%= curso.nombre %>, <%= curso.institucion %> - <%= curso.anio %></li>
+                <% }) %>
+            </ol>
+        </section>
+
+        <section>
+            <h2 id="enlaces">Enlaces de interés</h2>
+            <ul>
+                <% enlaces.forEach((enlace) => { %>
+                    <li><a href="<%= enlace.url %>" target="_blank" rel="noopener"><%= enlace.texto %></a></li>
+                <% }) %>
+            </ul>
+        </section>
+
+        <section>
+            <h2 id="contacto">Contacto</h2>
+
+            <% if (errores.length > 0) { %>
+                <div class="errores" role="alert">
+                    <p><strong>Revise el formulario:</strong></p>
+                    <ul>
+                        <% errores.forEach((error) => { %>
+                            <li><%= error %></li>
+                        <% }) %>
+                    </ul>
+                </div>
+            <% } %>
+
+            <form action="/contacto#contacto" method="post" class="formulario-contacto">
+                <label for="nombre">Nombre</label>
+                <input type="text" id="nombre" name="nombre" required maxlength="100"
+                       autocomplete="name" value="<%= formulario.nombre %>">
+
+                <label for="correo">Correo electrónico</label>
+                <input type="email" id="correo" name="correo" required maxlength="150"
+                       autocomplete="email" value="<%= formulario.correo %>">
+
+                <label for="mensaje">Mensaje</label>
+                <textarea id="mensaje" name="mensaje" rows="5" required maxlength="2000"><%= formulario.mensaje %></textarea>
+
+                <button type="submit">Enviar mensaje</button>
+            </form>
+        </section>
+
+    </main>
+
+<%- include("partials/footer") %>
